@@ -22,11 +22,11 @@ public class 이미지응답하기  extends HttpServlet {
 		PrintWriter  out  =resp.getWriter();
 
 		out.println("<html>");
-		out.println("<head>");
-		out.println("</head>");                        
+		out.println("<head>");				// /프로젝트명/a.jpg
+		out.println("</head>");           //   \프로젝트명/imgs/파일명.jpg          
 		out.println("<body>");
-		out.println("<img  src=\"/day01/a.webp\" >");    //  
-		out.println("<img  src=\"a.webp\" >");    // " 
+		out.println("<img  src=\"/day01/imgs/meat.jpg\" >");    //  절대 경로(위치) , 프로젝트 기준으로 경로 표시 
+		out.println("<img  src=\"a.webp\" > alt=\"고기 이미지\"");    //  상대 경로(위치) , 
 		out.println("</body>");
 		out.println("</html>");
 	}

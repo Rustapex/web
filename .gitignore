@@ -1,0 +1,26 @@
+# Eclipse
+.metadata/
+Servers/
+.settings/
+.classpath
+.project
+
+# IntelliJ
+.idea/
+*.iml
+
+# Build output
+target/
+build/
+out/
+bin/
+
+# Java
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
