@@ -1,26 +1,42 @@
-# Eclipse
-.metadata/
-Servers/
-.settings/
-.classpath
-.project
-
-# IntelliJ
-.idea/
-*.iml
-
-# Build output
+# =========================
+# Java build output
+# =========================
+*.class
+*.log
 target/
 build/
 out/
-bin/
 
-# Java
-*.class
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
+*.iml
 
-# OS
+# =========================
+# Eclipse / STS
+# =========================
+.project
+.classpath
+.settings/
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# OS files
+# =========================
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
+# =========================
+# Local libraries / drivers
+# =========================
+day2Prac/src/main/webapp/WEB-INF/lib/ojdbc8.jar
+
+# =========================
+# Auto-generated manifest
+# =========================
+day2Prac/src/main/webapp/META-INF/MANIFEST.MF
