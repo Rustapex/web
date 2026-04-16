@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2> 영화 목록 추가하기</h2>
+
+<form action="/day01Prac/movie/lib" method="post">
+	<input type="hidden" name="job" value="add">
+	<input type="text" name="title" placeholder="추가할 영화 제목, 평점을 입력하세요">
+	<input type="text" name="star" placeholder="평점">
+	<button>추가하기</button>
+</form>
+
+<form action="/day01Prac/movie/lib" method="post">
+	<input type="hidden" name="job" value="update">
+	<input type="text" name="title" placeholder="수정할 영화 제목을 입력하세요">
+	<input type="text" name="newtitle" placeholder="수정된 새 영화 제목을 입력하세요">
+	<input type="text" name="newStar" placeholder="수정된 새 평점을 입력하세요">
+	<button>수정하기</button>
+</form>
+
+<form action="/day01Prac/movie/lib" method="post">
+	<input type="hidden" name="job" value="delete">
+	<input type="text" name="title" placeholder="삭제할 영화제목을 입력하세요">
+	<button>삭제하기</button>
+</form>
+
+<form action="/day01Prac/movie/lib" method="get">
+	<input type="hidden" name="job" value="get">
+	<input type="text" name="title" placeholder="조회할 영화제목을 입력">
+	<button>조회하기</button>
+</form>
+
+</body>
+</html>
