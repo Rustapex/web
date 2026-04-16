@@ -40,3 +40,6 @@ day2Prac/src/main/webapp/WEB-INF/lib/ojdbc8.jar
 # Auto-generated manifest
 # =========================
 day2Prac/src/main/webapp/META-INF/MANIFEST.MF
+
+.metadata/
+Servers/
