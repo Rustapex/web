@@ -19,6 +19,9 @@ out/
 .project
 .classpath
 .settings/
+*.jar
+*.mf
+*.MF
 
 # =========================
 # VS Code
