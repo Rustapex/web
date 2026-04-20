@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+<h2> GET / POST</h2>
+<p>
+	GET 요청
+	A 태그 , URL 주소 줄에 직접 입력, form 태그 method="get" (default : get) <br>
+	서버에 간단한 정보의 데이터를 보낼 때에 사용함 (주소줄에 노출됨) , 데이터 형식, 데이터 길이 제한되어있음<br>
+	단순 조회 기능 <br>
+	캐시 지원
+</p>
+
+<a href ="/day04Prac/lotte.do">get 요청</a>
+
+<form action="/day04Prac/lotte.do" method="get">
+	<button>전송1</button>
+</form>
+
+<p>
+	post 요청 : 서버의 상태가 바뀌는 작업(등록, 변경, 삭제) <br>
+	form 태그에서 method="post" 요청해야함 <br>
+	사용자의 다양한 데이터를 서버로 보낼 수 있다. <br>
+	사용자의 데이터가 노출 X
+	요청 body에 담겨서 보내짐. text img 영상 보낼 수 있다.
+</p>
+
+<form action="/day04Prac/lotte.do" method="post">
+	<button>전송2</button>
+</form>
+</body>
+</html>
