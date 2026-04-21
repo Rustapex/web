@@ -14,16 +14,6 @@ out/
 *.iml
 
 # =========================
-# Eclipse / STS
-# =========================
-.project
-.classpath
-.settings/
-*.jar
-*.mf
-*.MF
-
-# =========================
 # VS Code
 # =========================
 .vscode/
@@ -35,14 +25,12 @@ out/
 Thumbs.db
 
 # =========================
-# Local libraries / drivers
+# Eclipse workspace local-only
 # =========================
-day2Prac/src/main/webapp/WEB-INF/lib/ojdbc8.jar
-
-# =========================
-# Auto-generated manifest
-# =========================
-day2Prac/src/main/webapp/META-INF/MANIFEST.MF
-
 .metadata/
 Servers/
+
+# =========================
+# Optional local libraries
+# =========================
+# day2Prac/src/main/webapp/WEB-INF/lib/ojdbc8.jar
