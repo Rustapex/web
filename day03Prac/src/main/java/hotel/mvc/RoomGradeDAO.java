@@ -148,7 +148,7 @@ public class RoomGradeDAO {
 		Connection con = dbcon();
 		PreparedStatement pst = null;
 		int resultRow =0;
-		String sql ="Update RoomGrade set room_name =?, price =? where =? roomgrade_num";
+		String sql ="Update RoomGrade set room_name =?, price =? where roomgrade_num = ?";
 		
 		try {
 			pst= con.prepareStatement(sql);
@@ -170,12 +170,14 @@ public class RoomGradeDAO {
 	
 //	삭제하기
 	public int delete(String roomgradeNum) {
-		Connection con = null;
+		Connection con = dbcon();
 		PreparedStatement pst = null;
 		int resultRow = 0;
 		String sql = "delete from RoomGrade where roomgrade_num = ?";
 		
 		try {
+			pst= con.prepareStatement(sql);
+			
 			pst.setString(1, roomgradeNum);
 			resultRow = pst.executeUpdate();
 			
