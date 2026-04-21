@@ -35,3 +35,4 @@ Servers/
 # =========================
 # day2Prac/src/main/webapp/WEB-INF/lib/ojdbc8.jar
 **/ojdbc8.jar
+**/teacher.jar
