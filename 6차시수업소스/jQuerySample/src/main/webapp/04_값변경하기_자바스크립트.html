@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	 
+	 <script>
+	 //리스너를 추가하는 방법 사용
+	 
+	 	
+	 	// load 완료하면 function() 실행 해줘.
+	 	
+	 	/*window.addEventListener("load" , function(){
+			 // alert("load 완료");	 		 
+			  let  div= document.getElementById("wrap");
+			  alert( div.innerHTML);
+			  div.innerHTML="변경되었다";  
+		 }); */
+		 
+		 
+		 
+		// 문서가 모두 준비되면 실행되는 jQuery 방식
+		 $(function() {
+		     // alert("load 완료");
+
+		     // id가 wrap인 요소를 jQuery로 선택
+		     let div = $("#wrap");
+
+		     // 선택한 요소의 내부 HTML 내용 확인
+		     alert(div.html());
+
+		     // 내부 HTML 내용을 "변경되었다"로 바꾸기
+		     div.html("변경되었다");
+		 });
+	
+	 </script>
+	
+	
+	
+</head>
+<body>
+	
+	 <div id="wrap">aaa</div>
+	 
+	
+	
+
+</body>
+</html>
