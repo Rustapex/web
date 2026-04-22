@@ -36,3 +36,7 @@ Servers/
 # day2Prac/src/main/webapp/WEB-INF/lib/ojdbc8.jar
 **/ojdbc8.jar
 **/teacher.jar
+
+**/WEB-INF/lib/*.jar
+**/META-INF/MANIFEST.MF
+**/.settings/org.eclipse.core.resources.prefs
