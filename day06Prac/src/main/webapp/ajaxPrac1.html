@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+    // my Ajax
+    function myAjax(info){   // info는 객체 타입으로 받음
+        setTimeout(function(){
+
+            // 실제 서버와 통신한다고 가정
+            let type = info.type;
+            let dataType = info.dataType;
+            let url = info.url;
+
+            let errorInfo = "에러 정보";
+
+            // 서버와 통신 성공했다고 가정
+            let responseResult = "스파게티";
+            let result = true;
+
+            if(result){
+                info.success(responseResult);
+            } else {
+                info.error(errorInfo);
+            }
+
+        }, 3000);
+    }
+
+    function getData(){
+    	myAjax( {
+    		type:"get",
+    		dataType: "text" ,
+    		url:"/프로젝명/food0",
+    		success: function( data){
+    			console.log( data);
+    			document.getElementById("result").innerHTML= data;
+    			
+    			
+    		} ,
+    		error: function( err){
+    			console.log( err);
+    		}
+    	} );
+    	
+    }
+</script>
+
+<button onclick="getData()">데이터 가져오기</button>
+
+</body>
+</html>

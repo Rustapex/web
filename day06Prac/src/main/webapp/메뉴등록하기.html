@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+
+/* {name : "이름", price = "10000" => request로 부터 직접 바디 food => 적재}
+ * request로 부터 직접 바디 읽기
+ jsonObject 로 부터 ㅅ직접 배우ㅡ기
+ 
+ (/)
+ */
+ function regData(){
+	    console.log("regData 호출됨");
+
+	    let newFood = {
+	        name: "모듬스시",
+	        price: 20000
+	    };
+	    console.log(newFood);
+
+	    let newFoodStr = JSON.stringify(newFood);
+	    console.log(newFoodStr);
+
+	    $.ajax({
+	        type: "post",
+	        url: "/day06Prac/foodReg",
+	        contentType: "application/json; charset=UTF-8",
+	        data: newFoodStr,
+	        success: function(data){
+	            console.log("성공:", data);
+	        },
+	        error: function(error){
+	            console.log("실패:", error);
+	        }
+	    });
+	}
+</script>
+</head>
+<body>
+
+<button onclick="regData()">제출하기</button>
+
+</body>
+</html>

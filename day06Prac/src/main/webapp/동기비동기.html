@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+
+//동기작업
+console.log("주문");
+console.log("커피 받기");
+console.log("마시기");
+
+//비동기작업
+console.log("주문"); 
+setTimeout( function(){ "커피받기"}  , 2000);
+console.log("마시기");
+
+// 비동기 작업의 수행 결과를 얻고 싶다면
+// 콜백 함수 사용하기
+
+//callback 함수 == cb
+function drinkOrder(drinkName, cb){ 
+	
+	setTimeout(function(){
+		// 음료 만들기
+		let drink = drinkName + " 완성";
+		
+		cb(drink);
+		
+	}, 2000);
+}
+
+drinkOrder("iceLatte", function(data){
+	console.log(data + "***");
+});
+
+</script>
+
+</body>
+</html>

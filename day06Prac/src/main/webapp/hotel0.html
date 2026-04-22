@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+	function getHotel(){
+		$.ajax({
+			type : "get",
+			url : "/day06Prac/hotel0",
+			success : function getData(data){
+				console.log(data);
+				
+				let str = `<ul>`;
+				data.forEach(function(item){
+					console.log(item);
+					str += `<li>${item.hotelId} ${item.hotelName} ${item.hotelStar}</li>`
+				});
+				str += `</ul>`;
+				$("result").html(str);
+				
+			},
+			error : function getError(error){
+				console.log(error);
+			}
+			
+		});
+	}
+</script>
+</head>
+<body>
+<button onclick="getHotel()"> 호텔 조회하기 </button>
+
+<div id="result"> 호텔</div>
+
+</body>
+</html>
