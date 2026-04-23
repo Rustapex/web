@@ -26,7 +26,7 @@ public class GoodsListServlet  extends HttpServlet{
 		 
 		 //상품 뷰로 포워드
 		 //상품리스트 뷰가 응답됨
-		 req.getRequestDispatcher("WEB-INF/views/goods_list.jsp").forward(req, resp);
+		 req.getRequestDispatcher("/WEB-INF/views/goods_list.jsp").forward(req, resp);
 	}
 
 }

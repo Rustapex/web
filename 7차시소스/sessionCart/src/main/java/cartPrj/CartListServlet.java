@@ -25,7 +25,7 @@ public class CartListServlet  extends HttpServlet {
 		//세션에서 장바구니 가져오기가 있으면
 		if( result != null) {
 			ArrayList<String> list = (ArrayList<String>) result;
-			req.getRequestDispatcher("WEB-INF/views/cartList.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/cartList.jsp").forward(req, resp);
 			 
 		}
 		

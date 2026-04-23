@@ -10,7 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+// [삭제하기] 
 
+// - 사용자 세션 얻어오기(필수) getSession(false)
+// - cartList 꺼내기
+// - 해당 상품을 cartList 삭제하기 (remove)
 
 @WebServlet("/deleteCart")
 public class CartDeleteServlet   extends HttpServlet{
@@ -21,9 +25,10 @@ public class CartDeleteServlet   extends HttpServlet{
 		String name  = req.getParameter("name");
 		 
 		//세션얻어오기
-		HttpSession session = req.getSession();
+		HttpSession session = req.getSession(false);
 		Object result =  session.getAttribute("cartList");
 		
+		if(session != null) {
 		
 		//세션에  cartList 가 있으면
 		if( result != null) {
@@ -40,10 +45,11 @@ public class CartDeleteServlet   extends HttpServlet{
 			
 			cartList.remove(removeIndex);
 		} 
+		}
 		
 		
 		
-		req.getRequestDispatcher("WEB-INF/views/cartList.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/views/cartList.jsp").forward(req, resp);
 	}
 
 }

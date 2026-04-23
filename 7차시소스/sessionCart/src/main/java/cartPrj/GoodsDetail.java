@@ -31,7 +31,7 @@ public class GoodsDetail   extends HttpServlet{
 		//모델심기
 		req.setAttribute("goods", goods);
 		
-		req.getRequestDispatcher("WEB-INF/views/goodsDetail.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/views/goodsDetail.jsp").forward(req, resp);
 	}
 
 }
