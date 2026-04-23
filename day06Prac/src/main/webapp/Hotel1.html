@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+	function send(){
+		$.ajax({
+			type : "get",
+			dataType : "json",
+			url : "/day06Prac/hotel1",
+			success : function(data){
+				console.log(data);
+				
+				let str = "";
+				for(let i=0; i<data.length;i++){
+					str += "아이디: " + data[i].hotelId + "<br>";
+					str += "이름: " + data[i].hotelName + "<br>";
+					str += "등급: " + data[i].hotelStar + "<br><hr>";
+				}
+				
+				$("#result").html(str);
+			},
+			error : function(error){
+				console.log(error);
+				alert("요청에 실패했습니다.");
+			}
+			
+		});
+	}
+
+</script>
+</head>
+
+<body>
+
+	<button onclick="send()"> 호텔 정보</button>
+	
+	<div id ="result"> 호텔</div>
+
+</body>
+</html>

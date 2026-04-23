@@ -27,5 +27,9 @@ public class HotelService {
 		}
 		return arr;
 	}
+	
+//	public String getHotelListStr() {
+//		
+//	}
 
 }
