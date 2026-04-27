@@ -6,6 +6,7 @@
 target/
 build/
 out/
+**/bin/
 
 # =========================
 # IntelliJ IDEA
@@ -29,6 +30,19 @@ Thumbs.db
 # =========================
 .metadata/
 Servers/
+**/.metadata/
+**/Servers/
+
+# Eclipse local preference files
+**/.settings/org.eclipse.jdt.core.prefs
+**/.settings/org.eclipse.core.resources.prefs
+**/.settings/org.eclipse.wst.common.component
+
+
+# Eclipse JavaScript tooling noise
+**/.settings/.jsdtscope
+**/.settings/org.eclipse.wst.jsdt.ui.superType.container
+**/.settings/org.eclipse.wst.jsdt.ui.superType.name
 
 # =========================
 # Optional local libraries
@@ -40,11 +54,9 @@ Servers/
 **/WEB-INF/lib/*.jar
 
 
-**/.settings/org.eclipse.core.resources.prefs
+
 
 *.txt
-**/.settings/.jsdtscope
-**/.settings/org.eclipse.wst.jsdt.ui.superType.container
-**/.settings/org.eclipse.wst.jsdt.ui.superType.name
+
 
 
